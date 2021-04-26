@@ -1,0 +1,7 @@
+title = 'Thingsboard instance definition'
+
+[source]
+host = 'localhost'
+port = 9090
+user = 'tenant@thingsboard.org'
+password = 'tenant'
