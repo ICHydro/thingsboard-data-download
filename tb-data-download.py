@@ -65,10 +65,11 @@ def main(config):
     )
     meta = r.json()['data']
     device_ids = [x['id']['id'] for x in meta if x['name'] in config['source']['devices']]
+    device_nms = [x['name'] for x in meta if x['name'] in config['source']['devices']]
     endTs   = current_time_ms()
     startTs = endTs - (24 * 60 * 60 * 1000 * 100)  # 30 [100?] days ago
     
-    for device in device_ids:
+    for device, name in zip(device_ids, device_nms):
         for variable in config['source']['variables']:
             # try:
             ts = getData(
@@ -107,7 +108,10 @@ def main(config):
                     vals.append(float(val))
 
             df = pd.DataFrame({'Date': tms, 'Value': vals, 'Flag': ''})
-            df.to_csv('test.csv', index=False)
+            df.to_csv(
+                name + '_' + variable + '-latest.csv',
+                index=False
+            )
             # except:
             #     pass
     
