@@ -1,7 +1,9 @@
 title = 'Thingsboard instance definition'
 
 [source]
-host = 'localhost'
-port = 9090
-user = 'tenant@thingsboard.org'
-password = 'tenant'
+host = 'riverflow.io'
+port = 8080
+user = 'MyThingsBoardUsername'
+password = 'MyThingsBoardPassword'
+devices = ['RL000282', 'RL000283']
+variables = ["h", "t", "v"]
