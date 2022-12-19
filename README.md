@@ -8,7 +8,7 @@ Python script to pull data from Thingsboard instance
 
 #### Install python
 
-Install Python first if you do not have it. You can downloat it from [the Python website][https://www.python.org/downloads/windows/].
+Install Python first if you do not have it. You can download it from [the Python website](https://www.python.org/downloads/windows/).
 
 #### Install the required python libraries
 
